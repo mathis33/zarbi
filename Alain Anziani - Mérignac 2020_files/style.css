@@ -1,0 +1,57 @@
+/*
+Theme Name: Anziani 2020
+Description: Theme enfant de Divi par Valentin Tellier
+Author: Valentin Tellier
+Author URI: https://www.valentintellier.fr
+Template: Divi
+Version: 1.0
+*/
+
+.dc-centrer-verticalement {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+  	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	 -moz-box-orient: vertical;
+	 -moz-box-direction: normal;
+	  -ms-flex-direction: column;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	-moz-box-pack: center;
+	-ms-flex-pack: center;
+}
+
+@media only screen and (max-width : 980px) {
+	.dc-inverser-colonnes--section .dc-inverser-colonnes--ligne {
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		-webkit-flex-direction: column-reverse;
+		-ms-flex-direction: column-reverse;
+		flex-direction: column-reverse;
+	}
+}
+
+.et_mobile_menu {
+	margin-left: -30px;
+	padding: 5%;
+	width: calc( 100% + 60px);
+}
+
+.mobile_nav.opened .mobile_menu_bar:before {
+	content: "\4d";
+}
+
+.et_pb_contact_right p input {
+	max-width: 50px;
+}
+
+sup, sub {
+    font-size: 70%;
+}
