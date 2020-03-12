@@ -1550,16 +1550,57 @@ sambadmerignac33@gmail.com - 07 66 62 85 52
    <script>
 
        /*Déclaration de la div "madiv" */
-       let madiv = document.createElement("div");
-       let zonedetexte = document.createElement("textarea");
-       let champinput = document.createElement("input");
-       let monbouton = document.createElement("button");
-       madiv.appendChild(zonedetexte);
-       madiv.appendChild(champinput);
-       madiv.appendChild(monbouton);
-        document.body.append(zonedetexte);
-        document.body.append(champinput);
-        document.body.append(monbouton);
+       let maDiv = document.createElement("div");
+       let zoneDetexte = document.createElement("textarea");
+       let champInput = document.createElement("input");
+       let monBouton = document.createElement("button");
+
+       /* Déclaration de ce que "madiv" contient */
+
+       maDiv.appendChild(zoneDetexte);
+       maDiv.appendChild(champInput);
+       maDiv.appendChild(monBouton);
+
+       /* Affichage de la div */
+
+       document.body.append(zoneDetexte);
+        document.body.append(champInput);
+        document.body.append(monBouton);
+
+        /* Traitement du texte */
+
+        /* Réponses automatiques, gauche : entrée | droite : réponse */
+
+       const frenchLexique = {
+           'Bonjour': 'Tiens, je vous reconnais' ,
+           'Quel temps fait-il ?': 'Vraiment pas beau',
+           'Merci pour les travaux': 'Ok Stavo',
+           'Tu es beau': 'Je ressemble à Quentin Serda',
+       };
+
+        /* Initialisation du chatbot */
+
+       monBouton.addEventListener('click', function () {
+
+         for (let i=0 ; i < Object.keys(frenchLexique).length; i++){
+           if (zoneDetexte.value.includes(Object.keys(frenchLexique)[i])){
+               zoneDetexte.innerText = Object.values(frenchLexique)[i];
+           }
+       }
+           zoneDetexte.innerText = champInput.value;
+
+
+       });
+
+
+       /* Texte contenu dans "monbouton" */
+
+       monBouton.innerText = 'Envoyer';
+
+        /* Traitement de texte */
+
+
+
 
 
    </script>
