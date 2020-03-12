@@ -1576,6 +1576,10 @@ sambadmerignac33@gmail.com - 07 66 62 85 52
            'Quel temps fait-il ?': 'Vraiment pas beau',
            'Merci pour les travaux': 'Ok Stavo',
            'Tu es beau': 'Je ressemble à Quentin Serda',
+           'Hello': 'You are wonderful' ,
+           'What is the weather ?': 'Not sunny at all',
+           'Thanks for the work': 'Ok my Stavo',
+           'You are beautiful': 'I look like Quentin Serda',
        };
 
         /* Initialisation du chatbot */
@@ -1583,11 +1587,11 @@ sambadmerignac33@gmail.com - 07 66 62 85 52
        monBouton.addEventListener('click', function () {
 
          for (let i=0 ; i < Object.keys(frenchLexique).length; i++){
-           if (zoneDetexte.value.includes(Object.keys(frenchLexique)[i])){
-               zoneDetexte.innerText = Object.values(frenchLexique)[i];
+           if (champInput.value.includes(Object.keys(frenchLexique)[i])){
+               zoneDetexte.value = Object.values(frenchLexique)[i];
            }
        }
-           zoneDetexte.innerText = champInput.value;
+       // zoneDetexte.innerText = champInput.value;
 
 
        });
