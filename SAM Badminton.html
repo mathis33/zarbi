@@ -1549,27 +1549,41 @@ sambadmerignac33@gmail.com - 07 66 62 85 52
 
    <script>
 
-       /*Déclaration de la div "madiv" */
+       /* Déclaration de la div "madiv" */
+
        let maDiv = document.createElement("div");
        let zoneDetexte = document.createElement("textarea");
        let champInput = document.createElement("input");
        let monBouton = document.createElement("button");
+       let boutonVide = document.createElement("button");
+       let logoBot = document.createElement("div");
+       let chatClose = document.createElement("div");
+       let introBot = document.createElement("p");
+
+
+
+       /* Ajout de class sur les éléments */
+
+       monBouton.classList.add("chat-send");
+       champInput.classList.add("chat-input");
+       zoneDetexte.classList.add("chat-texte");
+       maDiv.classList.add("chatbox");
+       logoBot.classList.add("logo-bot");
+       chatClose.classList.add("chat-close");
+       introBot.classList.add("intro-bot");
+
 
        /* Déclaration de ce que "madiv" contient */
 
-       maDiv.appendChild(zoneDetexte);
-       maDiv.appendChild(champInput);
-       maDiv.appendChild(monBouton);
+       maDiv.append(zoneDetexte, champInput, monBouton,boutonVide,logoBot,chatClose,introBot);
+
 
        /* Affichage de la div */
 
-       document.body.append(zoneDetexte);
-        document.body.append(champInput);
-        document.body.append(monBouton);
+       document.body.append(zoneDetexte, champInput, monBouton, boutonVide, logoBot, chatClose, introBot);
 
-        /* Traitement du texte */
 
-        /* Réponses automatiques, gauche : entrée | droite : réponse */
+       /* Réponses automatiques, gauche : entrée | droite : réponse */
 
        const frenchLexique = {
            'Bonjour': 'Tiens, je vous reconnais' ,
@@ -1600,8 +1614,9 @@ sambadmerignac33@gmail.com - 07 66 62 85 52
        /* Texte contenu dans "monbouton" */
 
        monBouton.innerText = 'Envoyer';
+       introBot.innerText = 'Bonjour, comment pouvons-nous vous aider ? Nous sommes là pour vous !';
 
-        /* Traitement de texte */
+
 
 
 
